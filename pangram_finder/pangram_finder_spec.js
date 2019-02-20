@@ -31,4 +31,9 @@ describe('PangramFinder', function () {
     const pangramFinder = new PangramFinder('is_this_a_pangram?!');
     assert.strictEqual(pangramFinder.isPangram(), false);
   });
+
+  it('should be able to detect 26 characters thats not pangram', function () {
+    const pangramFinder = new PangramFinder('qwertyqwertyqwertyqwertyuq');
+    assert.strictEqual(pangramFinder.isPangram(), false);
+  });
 });
